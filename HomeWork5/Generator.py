@@ -1,19 +1,19 @@
 import time
 
 
-def gen_numbers():
-    num = 0
+def generator_numbers():
+    number = 0
     while True:
         time.sleep(1)
-        num += 1
-        yield num
+        number += 1
+        yield number
 
 
-gen = gen_numbers()
+gen_numb = generator_numbers()
 while True:
-    i = (next(gen))
-    if i % 3 == 0:
-        a = i/3
-        print('Василий ', i, ', остаток от делений => ', a)
+    buf1 = (next(gen_numb))
+    if buf1 % 3 == 0:
+        buf2 = buf1/3
+        print('Василий ', buf1, ', остаток от делений => ', buf2)
     else:
-        print(i)
+        print(buf1)
